@@ -1,25 +1,23 @@
-
-
 function repeater(str, options) {
-   const {
-      repeatTimes = 1,
-      separator = "+",
-      addition = "",
-      additionRepeatTimes = 1,
-      additionSeparator = "|",
-   } = options;
+  const {
+    repeatTimes = 1,
+    separator = "+",
+    addition = "",
+    additionRepeatTimes = 1,
+    additionSeparator = "|",
+  } = options;
 
-   const additionString = new Array(additionRepeatTimes)
-      .fill(String(addition))
-      .join(additionSeparator);
+  const additionString = new Array(additionRepeatTimes)
+    .fill(String(addition))
+    .join(additionSeparator);
 
-   const result = new Array(repeatTimes)
-      .fill(String(str) + additionString)
-      .join(separator);
+  const result = new Array(repeatTimes)
+    .fill(String(str) + additionString)
+    .join(separator);
 
-   return result;
+  return result;
 }
 
 module.exports = {
-   repeater,
+  repeater,
 };

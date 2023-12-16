@@ -1,20 +1,19 @@
-
 function encodeLine(str) {
-   let result = '';
-   let count = 1;
+  let result = "";
+  let count = 1;
 
-   for (let i = 0; i < str.length; i++) {
-      if (str[i] === str[i + 1]) {
-         count++;
-      } else {
-         result += count === 1 ? str[i] : count + str[i];
-         count = 1;
-      }
-   }
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i + 1]) {
+      count++;
+    } else {
+      result += count === 1 ? str[i] : count + str[i];
+      count = 1;
+    }
+  }
 
-   return result;
+  return result;
 }
 
 module.exports = {
-   encodeLine
+  encodeLine,
 };
